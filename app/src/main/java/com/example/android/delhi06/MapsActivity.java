@@ -23,6 +23,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+       /* Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+
+            public void run() {
+                // TODO Auto-generated method stub
+                finish();
+                Intent menu = new Intent(getBaseContext(), MapsActivity.class);
+                startActivity(menu);
+            }
+        }, 3000);*/
+
         // sample code snippet to set the text content on the ExpandableTextView
         ExpandableTextView expTv1 = (ExpandableTextView) findViewById(R.id.expand_text_view);
 
@@ -40,7 +51,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         sliderShow.addSlider(textSliderView);
 
         DefaultSliderView textSliderView2 = new DefaultSliderView(this);
-        textSliderView2.image(R.drawable.pic2);
+        textSliderView2.image(R.drawable.pic1);
         sliderShow.addSlider(textSliderView2);
     }
 
