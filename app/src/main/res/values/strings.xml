@@ -8,4 +8,9 @@
         platform for creating apps and games for Android users everywhere, as well as an open marketplace
         for distributing to them instantly.
     </string>
+
+    <string name="category_topspots">TOP SPOTS</string>
+    <string name="category_restaurants">RESTAURANTS</string>
+    <string name="category_religious">RELIGIOUS</string>
+    <string name="category_shopping">SHOPPING</string>
 </resources>

@@ -36,11 +36,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SliderLayout sliderShow = (SliderLayout) findViewById(R.id.slider);
 
         DefaultSliderView textSliderView = new DefaultSliderView(this);
-        textSliderView.image(R.drawable.pic1).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
+        textSliderView.image(R.drawable.red_fort_1).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
         sliderShow.addSlider(textSliderView);
 
         DefaultSliderView textSliderView2 = new DefaultSliderView(this);
-        textSliderView2.image(R.drawable.pic1);
+        textSliderView2.image(R.drawable.bangla_sahib_2).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);;
         sliderShow.addSlider(textSliderView2);
     }
 
