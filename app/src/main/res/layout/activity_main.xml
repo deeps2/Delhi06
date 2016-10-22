@@ -8,43 +8,29 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <!-- android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"> -->
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap"
-            app:contentScrim="?attr/colorPrimary">   <!-- -->
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|snap" />
 
-            <ImageView
-                android:id="@+id/top_image"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:scaleType="center"
-                android:src="@drawable/topspots"
-                app:layout_collapseMode="parallax" />
-
-
-            <!--
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/mToolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:layout_collapseMode="pin"/> -->
-        </android.support.design.widget.CollapsingToolbarLayout>
+        <ImageView
+            android:id="@+id/top_image"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:scaleType="center"
+            android:src="@drawable/topspots"
+            app:layout_scrollFlags="scroll|snap" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="bottom"
-            android:background="?attr/colorPrimary"
-            app:tabMode="scrollable"
-            />
-
+            app:tabMode="scrollable" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -53,25 +39,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
 </android.support.design.widget.CoordinatorLayout>
 
-
-    <!--
-    <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/sliding_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-    -->

@@ -3,6 +3,5 @@
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#bdbdbd</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="statusBarColor">#bdbdbd</color>
-    <color name="titleTextColor">#000000</color>
+    <color name="window_background">#f5f5f5</color>
 </resources>
