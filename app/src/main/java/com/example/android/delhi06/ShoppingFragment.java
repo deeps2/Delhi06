@@ -7,10 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.ArrayList;
 
-public class TopSpotsFragment extends Fragment {
+public class ShoppingFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -18,13 +17,13 @@ public class TopSpotsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place(R.drawable.red_fort_1,"Red Fort","Iconic 1600s imperial residence & museum"));
-        places.add(new Place(R.drawable.qutub_minar_4,"Qutub Minar","5-storey victory tower with balconies"));
-        places.add(new Place(R.drawable.india_gate_2,"India Gate","1920s triumphal arcch & war memorial"));
-        places.add(new Place(R.drawable.humayun_tomb_1,"Humayun's Tomb","Palatial 16th-century tomb of Humayun"));
+        places.add(new Place(R.drawable.connaught_place_3,"Connaught Place","5th most expensive office market in the world"));
+        places.add(new Place(R.drawable.khan_market_2,"Khan Market","Khan Market (Est.1951) has been ranked as the costliest retail location in India"));
+        places.add(new Place(R.drawable.sarojini_nagar_4,"Sarojini-Nagar Market","One of Delhi's biggest markets and a destination for every girl who's out on a hunt for trendy clothes at killer prices"));
+        places.add(new Place(R.drawable.chandini_chowk_1,"Chandini Chowk","One of the oldest and busiest markets in Old Delhi"));
 
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(),places);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
 
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

@@ -17,16 +17,14 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
+        if (position == 0)
             return new TopSpotsFragment();
-        } else if (position == 1){
-            return new TopSpotsFragment();  //change these fragments
-        } else if (position == 2) {
-            return new TopSpotsFragment();
-        }
-        else {
-            return new TopSpotsFragment();
-        }
+        else if (position == 1)
+            return new RestaurantsFragment();
+        else if (position == 2)
+            return new ReligiousFragment();
+        else
+            return new ShoppingFragment();
     }
 
     @Override
@@ -36,16 +34,13 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-
-        if (position == 0) {
+        if (position == 0)
             return mContext.getString(R.string.category_topspots);
-        } else if (position == 1) {
+        else if (position == 1)
             return mContext.getString(R.string.category_restaurants);
-        } else if (position == 2) {
+        else if (position == 2)
             return mContext.getString(R.string.category_religious);
-        } else {
+        else
             return mContext.getString(R.string.category_shopping);
-        }
-
     }
 }

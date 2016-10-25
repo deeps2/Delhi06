@@ -22,7 +22,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="190dp">
 
                 <ImageView
                     android:id="@+id/place_image"
@@ -46,9 +46,10 @@
             <TextView
                 android:id="@+id/place_summary"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="74dp"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
+                android:paddingRight="16dp"
                 android:fontFamily="sans-serif"
                 android:text="Temple with a flower like design" />
 
