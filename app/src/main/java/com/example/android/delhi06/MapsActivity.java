@@ -2,6 +2,7 @@ package com.example.android.delhi06;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -22,6 +23,33 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        IntentPlaceObject currentPlace = (IntentPlaceObject) getIntent().getSerializableExtra("CLICKED_PLACE");
+
+        TextView  tv1 = (TextView)findViewById(R.id.tv1);
+        TextView  tv2 = (TextView)findViewById(R.id.tv2);
+        TextView  tv3 = (TextView)findViewById(R.id.tv3);
+        TextView  tv4 = (TextView)findViewById(R.id.tv4);
+        TextView  tv5 = (TextView)findViewById(R.id.tv5);
+        TextView  tv6 = (TextView)findViewById(R.id.tv6);
+        TextView  tv7 = (TextView)findViewById(R.id.tv7);
+        TextView  tv8 = (TextView)findViewById(R.id.tv8);
+        TextView  tv9 = (TextView)findViewById(R.id.tv9);
+        TextView  tv10 = (TextView)findViewById(R.id.tv10);
+        TextView  tv11 = (TextView)findViewById(R.id.tv11);
+
+        tv1.setText(getResources().getResourceEntryName(currentPlace.getImageResourceId()));
+        tv2.setText(currentPlace.getPlaceName());
+        tv3.setText(currentPlace.getPlaceSummary());
+        tv4.setText(getResources().getResourceEntryName(currentPlace.getPlaceImage1()));
+        tv5.setText(getResources().getResourceEntryName(currentPlace.getPlaceImage2()));
+        tv6.setText(getResources().getResourceEntryName(currentPlace.getPlaceImage3()));
+        tv7.setText(currentPlace.getPlaceDescription());
+        tv8.setText(Double.toString(currentPlace.getLattitude()));
+        tv9.setText(Double.toString(currentPlace.getLongitude()));
+        tv10.setText(currentPlace.getAddress());
+        tv11.setText(currentPlace.getPhoneNo());
+
 
         // sample code snippet to set the text content on the ExpandableTextView
         ExpandableTextView expTv1 = (ExpandableTextView) findViewById(R.id.expand_text_view);

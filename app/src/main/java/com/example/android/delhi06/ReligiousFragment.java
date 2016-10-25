@@ -18,10 +18,10 @@ public class ReligiousFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place(R.drawable.laxminarayan_1,"Laxmi Narayan Mandir","Expansive hindu temple with shrines"));
-        places.add(new Place(R.drawable.bangla_sahib_4,"Bangla Sahib Gurudwara","Sikh religious site with healing waters"));
-        places.add(new Place(R.drawable.jama_masjid_1,"Jama Masjid","Vast, 17th-century Mughal-style mosque"));
-        places.add(new Place(R.drawable.lotus_temple_3,"Lotus Temple","Temple with a flower-like design"));
+        //places.add(new Place(R.drawable.laxminarayan_1,"Laxmi Narayan Mandir","Expansive hindu temple with shrines"));
+        //places.add(new Place(R.drawable.bangla_sahib_4,"Bangla Sahib Gurudwara","Sikh religious site with healing waters"));
+        //places.add(new Place(R.drawable.jama_masjid_1,"Jama Masjid","Vast, 17th-century Mughal-style mosque"));
+        //places.add(new Place(R.drawable.lotus_temple_3,"Lotus Temple","Temple with a flower-like design"));
 
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
         PlaceAdapter adapter = new PlaceAdapter(getActivity(),places);

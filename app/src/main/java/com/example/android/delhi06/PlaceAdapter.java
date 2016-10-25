@@ -16,7 +16,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
     private ArrayList<Place> places;
     private Context mContext;
 
-    public PlaceAdapter(Context context,ArrayList<Place> pl){
+    public PlaceAdapter(Context context, ArrayList<Place> pl) {
         places = pl;
         mContext = context;
     }
@@ -32,15 +32,15 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public ImageView mPlaceImage;  //has to be public as it is accessed directly by ViewHolder object in onBindViewHolder()
-        public TextView  mPlaceName;
-        public TextView  mPlaceSummary;
+        public TextView mPlaceName;
+        public TextView mPlaceSummary;
         public final Context context;
 
         public ViewHolder(final Context context, View v) {
             super(v);
-            mPlaceImage = (ImageView)v.findViewById(R.id.place_image);
-            mPlaceName = (TextView)v.findViewById(R.id.place_name);
-            mPlaceSummary = (TextView)v.findViewById(R.id.place_summary);
+            mPlaceImage = (ImageView) v.findViewById(R.id.place_image);
+            mPlaceName = (TextView) v.findViewById(R.id.place_name);
+            mPlaceSummary = (TextView) v.findViewById(R.id.place_summary);
 
             this.context = context;
             v.setOnClickListener(this);
@@ -48,7 +48,24 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
         @Override
         public void onClick(View v) {
-            Intent mainIntent = new Intent(context,MapsActivity.class);
+            int position = getAdapterPosition();
+            Place currentPlaceObject = places.get(position);
+
+            IntentPlaceObject currentPlace = new IntentPlaceObject(currentPlaceObject.getImageResourceId(),
+                    currentPlaceObject.getPlaceName(),
+                    currentPlaceObject.getPlaceSummary(),
+                    currentPlaceObject.getPlaceImage1(),
+                    currentPlaceObject.getPlaceImage2(),
+                    currentPlaceObject.getPlaceImage3(),
+                    currentPlaceObject.getPlaceDescription(),
+                    currentPlaceObject.getLattitude(),
+                    currentPlaceObject.getLongitude(),
+                    currentPlaceObject.getAddress(),
+                    currentPlaceObject.getPhoneNo());
+
+
+            Intent mainIntent = new Intent(context, MapsActivity.class);
+            mainIntent.putExtra("CLICKED_PLACE", currentPlace);
             context.startActivity(mainIntent);
         }
     }
@@ -59,7 +76,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
         Context context = parent.getContext();
         // create a new view
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item , parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         ViewHolder vh = new ViewHolder(context, v);
         return vh;
     }

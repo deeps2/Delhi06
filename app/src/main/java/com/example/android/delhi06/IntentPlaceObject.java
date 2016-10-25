@@ -1,6 +1,9 @@
 package com.example.android.delhi06;
 
-public class Place {
+import java.io.Serializable;
+
+//An instance of this class will be passed within Intent when a card is clicked inside the fragment. See onClick(); PlaceAdapter.java for usage purpose
+public class IntentPlaceObject implements Serializable {
 
     private int mImageResourceId;
     private String mPlaceName;
@@ -18,7 +21,7 @@ public class Place {
     private String mPhoneNo;
 
 
-    public Place(int id, String placeName, String placeSummary, int placeImage1, int placeImage2,
+    public IntentPlaceObject(int id, String placeName, String placeSummary, int placeImage1, int placeImage2,
                  int placeImage3, String placeDescription, double lat, double lng, String address, String phoneNo){
         mImageResourceId = id;
         mPlaceName = placeName;
@@ -77,4 +80,3 @@ public class Place {
         return mPhoneNo;
     }
 }
-
