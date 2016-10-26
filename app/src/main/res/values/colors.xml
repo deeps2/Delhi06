@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryDark">#bdbdbd</color>
+    <color name="colorPrimary">#ffffff</color>     <!-- used in activity_main, activity_place_description-->
+    <color name="colorPrimaryDark">#bdbdbd</color>  <!-- status bar color (used in styles.xml)-->
     <color name="colorAccent">#FF4081</color>
-    <color name="window_background">#f5f5f5</color>
+    <color name="window_background">#f5f5f5</color>  <!-- background color of fragments(used in styles.xml)-->
 </resources>

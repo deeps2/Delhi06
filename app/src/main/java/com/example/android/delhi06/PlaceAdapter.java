@@ -64,8 +64,12 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
                     currentPlaceObject.getPhoneNo());
 
 
-            Intent mainIntent = new Intent(context, MapsActivity.class);
-            mainIntent.putExtra("CLICKED_PLACE", currentPlace);
+            //Intent mainIntent = new Intent(context, MapsActivity.class);
+            //mainIntent.putExtra("CLICKED_PLACE", currentPlace);
+            //context.startActivity(mainIntent);
+
+            Intent mainIntent = new Intent(context, PlaceDescription.class);
+            //mainIntent.putExtra("CLICKED_PLACE", currentPlace);
             context.startActivity(mainIntent);
         }
     }

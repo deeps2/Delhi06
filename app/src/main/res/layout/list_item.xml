@@ -11,14 +11,14 @@
         android:layout_marginTop="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:foreground="?android:attr/selectableItemBackground">
+           <!-- for touch ripple feedback -->
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -38,7 +38,6 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="16dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Red Fort"
                     android:textColor="#ffffff"
                     android:textSize="24sp" />
             </RelativeLayout>
@@ -50,8 +49,7 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
-                android:fontFamily="sans-serif"
-                android:text="Temple with a flower like design" />
+                android:fontFamily="sans-serif" />
 
         </LinearLayout>
 
