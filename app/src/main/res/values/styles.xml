@@ -4,6 +4,16 @@
         <item name="android:windowBackground">@color/window_background</item>
     </style>
 
+
+    <style name="WhiteText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="BlackText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title"> </style>
+
+
+
     <!--
     <- Base application theme. -
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
