@@ -18,11 +18,13 @@ public class TopSpotsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place(R.drawable.red_fort_1, "Red Fort", "Iconic 1600s imperial residence & museum",
-                R.drawable.red_fort_2, R.drawable.red_fort_3, R.drawable.red_fort_4,
-                (String) getText(R.string.dummy_text1), 28.656451, 77.241031, "c2/350", "9971617614"));
+        places.add(new Place(R.drawable.red_fort_1, (String) getText(R.string.Red_fort), (String) getText(R.string.Red_fort_summary),
+                R.drawable.red_fort_2, R.drawable.red_fort_3, R.drawable.red_fort_4, (String) getText(R.string.Red_fort_description),
+                28.656179, 77.241022, (String) getText(R.string.Red_fort_address), (String) getText(R.string.Red_fort_no)));
 
-
+        places.add(new Place(R.drawable.qutub_minar_4, (String) getText(R.string.Qutub_Minar), (String) getText(R.string.Qutub_Minar_summary),
+                R.drawable.qutub_minar_1, R.drawable.qutub_minar_2, R.drawable.qutub_minar_3, (String) getText(R.string.Qutub_Minar_description),
+                28.524504, 77.185461, (String) getText(R.string.Qututb_Minar_address), (String) getText(R.string.Qutub_Minar_no)));
 
         // places.add(new Place(R.drawable.qutub_minar_4,"Qutub Minar","5-storey victory tower with balconies"));
         // places.add(new Place(R.drawable.india_gate_2,"India Gate","1920s triumphal arcch & war memorial"));

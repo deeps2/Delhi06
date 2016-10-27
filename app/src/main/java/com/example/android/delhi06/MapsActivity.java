@@ -55,7 +55,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         ExpandableTextView expTv1 = (ExpandableTextView) findViewById(R.id.expand_text_view);
 
         // IMPORTANT - call setText on the ExpandableTextView to set the text content to display
-        expTv1.setText(getString(R.string.dummy_text1));
+        //expTv1.setText(getString(R.string.dummy_text1));
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);

@@ -1,16 +1,42 @@
 <resources>
     <string name="app_name">Delhi06</string>
 
-    <string name="dummy_text1"> Android powers hundreds of millions of mobile devices in more than
-        190 countries around the world. It\'s the largest installed base of any mobile platform and
-        growing fast—every day another million users power up their Android devices for the first
-        time and start looking for apps, games, and other digital content.\n\n Android gives you a world-class
-        platform for creating apps and games for Android users everywhere, as well as an open marketplace
-        for distributing to them instantly.
-    </string>
-
     <string name="category_topspots">TOP SPOTS</string>
     <string name="category_restaurants">RESTAURANTS</string>
     <string name="category_religious">RELIGIOUS</string>
     <string name="category_shopping">SHOPPING</string>
+    
+    <string name="Red_fort">Red Fort</string>
+    <string name="Red_fort_summary">Iconic 1600s imperial residence &amp; museum</string>
+    <string name="Red_fort_address">Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006</string>
+    <string name="Red_fort_description">Red Fort which is also known as Lal Qila was built by the
+        Mughal Emperor, Shah Jahan. This monument represents the grandeur of the Mughal Court, which
+        was constructed during the 17th century. Lal Qila was once the residential area of the Imperial
+        Family of India. It was the capital of the Mughal rulers until 1857, when Bahadur Shah Zafar II
+        went in exile after he was defeated by the Britishers.\n\nIn 2007, Red Fort was designated as
+        a UNESCO World Heritage Site, which is situated in Old Delhi. The construction of this fort
+        started in 1638 and it took over 10 years to complete the work in 1648. It was originally called
+        as \'Qila-i-Mubarak\', meaning the blessed fort, as it was the royal residence of Mughals.\n\nDuring
+        the British colonial rule, this fort was mainly used as a cantonment, which remained under the
+        control of Indian Army after Indian Independence. This fort has various structures including
+        Diwan-i-Aam, Diwan-i-Khas, Nahr-i-Behisht, Zenana, Mumtaz Mahal, Moti Masjid and Hayat Bakhsh Bagh.
+        Red Fort also houses a famous Swatantra Sangrama Sangrahalaya or the Museum of the Independence Movement.
+        There is also a Daawat Khana in Red Fort, which has been converted into a Tea House, where
+        tourists can have tea and snacks.</string>
+    <string name="Red_fort_no">+911123277705</string>
+
+    <string name="Qutub_Minar">Qutub Minar</string>
+    <string name="Qutub_Minar_summary">5-storey victory tower with balconies</string>
+    <string name="Qututb_Minar_address">Mehrauli, New Delhi, Delhi 110030</string>
+    <string name="Qutub_Minar_description">Qutub Minar is one of the tallest individual towers in the world,
+        measuring about 234 ft in height. The construction work of Qutub Minar was commissioned by the
+        ruler of Slave Dynasty, Qutubuddin-Aibak in 1199, which was later completed by his descendant
+        Shams-ud-din-Iltutmish. He added three more storeys to this structure along with carved minarets.\n\nIt
+        is situated in the Mehrauli region of Delhi, which is an ideal example of Indo-Islamic
+        architecture style. This place also has a 7 m high iron pillar, which has not shown any sign
+        of rust for more than 1,600 years.\n\nTravellers can also come across some other famous
+        monuments like Ala-i-Darwaza and Ala-i-Minar situated within the complex. The southern gateway
+        of Quwwat-ul-Islam that is the Ala-i-Darwaza was built in 1311 by Ala-ud-Din. Ala-i-Minar was
+        built by Ala-ud-Din Khilji, which is situated to the north of Qutub Minar.</string>
+    <string name="Qutub_Minar_no">+911124698431</string>
 </resources>
