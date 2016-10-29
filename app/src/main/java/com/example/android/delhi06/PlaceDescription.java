@@ -81,7 +81,7 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         sliderShow.addSlider(textSliderView);
         sliderShow.setDuration(1500);
 
-        DefaultSliderView textSliderView2 = new DefaultSliderView(this);  //try using 1 object only
+        DefaultSliderView textSliderView2 = new DefaultSliderView(this);
         textSliderView2.image(image2).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);;
         sliderShow.addSlider(textSliderView2);
         sliderShow.setDuration(1500);
@@ -99,10 +99,13 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         TextView addr = (TextView)findViewById(R.id.address);
         addr.setText(currentPlace.getAddress());
 
-        TextView phNo = (TextView)findViewById(R.id.phone_No);
-        phNo.setText(currentPlace.getPhoneNo());
-
         LinearLayout call_layer = (LinearLayout) findViewById (R.id.call_layout);
+        TextView phNo = (TextView)findViewById(R.id.phone_No);
+        if(!currentPlace.getPhoneNo().equals("0"))
+            phNo.setText(currentPlace.getPhoneNo());
+        else
+            call_layer.setVisibility(View.GONE);
+
         call_layer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

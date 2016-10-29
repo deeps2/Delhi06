@@ -17,10 +17,22 @@ public class ShoppingFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<Place>();
-        //places.add(new Place(R.drawable.connaught_place_3,"Connaught Place","5th most expensive office market in the world"));
-       // places.add(new Place(R.drawable.khan_market_2,"Khan Market","Khan Market (Est.1951) has been ranked as the costliest retail location in India"));
-        //places.add(new Place(R.drawable.sarojini_nagar_4,"Sarojini-Nagar Market","One of Delhi's biggest markets and a destination for every girl who's out on a hunt for trendy clothes at killer prices"));
-        //places.add(new Place(R.drawable.chandini_chowk_1,"Chandini Chowk","One of the oldest and busiest markets in Old Delhi"));
+
+        places.add(new Place(R.drawable.connaught_place_3, (String) getText(R.string.CP), (String) getText(R.string.CP_summary),
+                R.drawable.connaught_place_1, R.drawable.connaught_place_2, R.drawable.connaught_place_4, (String) getText(R.string.CP_description),
+                28.631640, 77.216672, (String) getText(R.string.CP_address), (String) getText(R.string.CP_no)));
+
+        places.add(new Place(R.drawable.khan_market_2, (String) getText(R.string.Khan), (String) getText(R.string.Khan_summary),
+                R.drawable.khan_market_1, R.drawable.khan_market_3, R.drawable.khan_market_4, (String) getText(R.string.Khan_description),
+                28.600392, 77.226814, (String) getText(R.string.Khan_address), (String) getText(R.string.Khan_no)));
+
+        places.add(new Place(R.drawable.sarojini_nagar_4, (String) getText(R.string.Sarojini), (String) getText(R.string.Sarojini_summary),
+                R.drawable.sarojini_nagar_1, R.drawable.sarojini_nagar_2, R.drawable.sarojini_nagar_3, (String) getText(R.string.Sarojini_description),
+                28.576749, 77.196219, (String) getText(R.string.Sarojini_address), (String) getText(R.string.Sarojini_no)));
+
+        places.add(new Place(R.drawable.chandini_chowk_1, (String) getText(R.string.Chowk), (String) getText(R.string.Chowk_summary),
+                R.drawable.chandini_chowk_2, R.drawable.chandini_chowk_3, R.drawable.chandini_chowk_4, (String) getText(R.string.Chowk_description),
+                28.657870, 77.230145, (String) getText(R.string.Chowk_address), (String) getText(R.string.Chowk_no)));
 
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
         PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
