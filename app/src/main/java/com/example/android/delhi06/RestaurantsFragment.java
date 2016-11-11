@@ -36,7 +36,7 @@ public class RestaurantsFragment extends Fragment {
                 28.631856, 77.216896, (String) getText(R.string.Wengers_address), (String) getText(R.string.Wengers_no)));
 
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
+        PlaceAdapter adapter = new PlaceAdapter(places);
 
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

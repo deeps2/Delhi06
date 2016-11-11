@@ -7,7 +7,6 @@ public class IntentPlaceObject implements Serializable {
 
     private int mImageResourceId;
     private String mPlaceName;
-    private String mPlaceSummary;
 
     private int mPlaceImage1;
     private int mPlaceImage2;
@@ -21,11 +20,10 @@ public class IntentPlaceObject implements Serializable {
     private String mPhoneNo;
 
 
-    public IntentPlaceObject(int id, String placeName, String placeSummary, int placeImage1, int placeImage2,
+    public IntentPlaceObject(int id, String placeName, int placeImage1, int placeImage2,
                  int placeImage3, String placeDescription, double lat, double lng, String address, String phoneNo){
         mImageResourceId = id;
         mPlaceName = placeName;
-        mPlaceSummary = placeSummary;
         mPlaceImage1 = placeImage1;
         mPlaceImage2 = placeImage2;
         mPlaceImage3 = placeImage3;
@@ -42,10 +40,6 @@ public class IntentPlaceObject implements Serializable {
 
     public String getPlaceName() {
         return mPlaceName;
-    }
-
-    public String getPlaceSummary(){
-        return mPlaceSummary;
     }
 
     public int getPlaceImage1() {

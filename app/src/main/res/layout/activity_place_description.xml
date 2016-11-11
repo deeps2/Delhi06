@@ -17,7 +17,6 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/BlackText"
             app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleTextAppearance="@style/WhiteText"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -41,6 +40,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <!-- to support scrolling inside coordinator layout -->
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,7 +72,7 @@
                     android:id="@id/expand_collapse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
+                    android:layout_gravity="center|bottom"
                     android:background="@android:color/transparent"
                     android:padding="8dp" />
 
@@ -82,9 +82,9 @@
                 android:id="@+id/map"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_margin="16dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
+                android:layout_margin="16dp"
                 map:cameraZoom="14"
                 map:liteMode="true" />
 
@@ -97,13 +97,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/location"/>
+                    android:src="@drawable/location" />
 
                 <TextView
+                    android:id="@+id/address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="8dp"
-                    android:id="@+id/address"/>
+                    android:paddingLeft="8dp" />
 
             </LinearLayout>
 
@@ -119,14 +119,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/call"/>
+                    android:src="@drawable/call" />
 
                 <TextView
+                    android:id="@+id/phone_No"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
                     android:paddingLeft="8dp"
-                    android:id="@+id/phone_No"/>
+                    android:paddingTop="8dp" />
 
             </LinearLayout>
 
@@ -134,22 +134,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="32dp"
-                android:background="#e0e0e0"/>
+                android:background="#e0e0e0" />
 
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_marginTop="9dp"
+                android:layout_gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_gravity="center" />
+                android:layout_marginTop="9dp" />
 
             <com.daimajia.slider.library.Indicators.PagerIndicator
                 android:id="@+id/custom_indicator"
                 style="@style/AndroidImageSlider_Attractive_Rect_Blue"
-                android:layout_gravity="center"
-                />
+                android:layout_gravity="center" />
 
         </LinearLayout>
 

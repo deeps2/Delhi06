@@ -9,5 +9,4 @@
         android:scaleType="center"
         android:src="@drawable/launcher"/>
 
-
 </LinearLayout>

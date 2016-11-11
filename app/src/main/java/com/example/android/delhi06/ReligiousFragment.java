@@ -36,7 +36,7 @@ public class ReligiousFragment extends Fragment {
                 28.553822, 77.258859, (String) getText(R.string.Lotus_address), (String) getText(R.string.Lotus_no)));
 
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(),places);
+        PlaceAdapter adapter = new PlaceAdapter(places);
 
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

@@ -14,16 +14,9 @@ import java.util.ArrayList;
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> {
 
     private ArrayList<Place> places;
-    private Context mContext;
 
-    public PlaceAdapter(Context context, ArrayList<Place> pl) {
+    public PlaceAdapter(ArrayList<Place> pl) {
         places = pl;
-        mContext = context;
-    }
-
-    // Easy access to the context object in the recyclerview
-    public Context getContext() {
-        return mContext;
     }
 
     // provide a reference to the views for each data item
@@ -41,11 +34,11 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
             mPlaceImage = (ImageView) v.findViewById(R.id.place_image);
             mPlaceName = (TextView) v.findViewById(R.id.place_name);
             mPlaceSummary = (TextView) v.findViewById(R.id.place_summary);
-
             this.context = context;
             v.setOnClickListener(this);
         }
 
+        //when a card gets clicked in the recycler view
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
@@ -53,7 +46,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
             IntentPlaceObject currentPlace = new IntentPlaceObject(currentPlaceObject.getImageResourceId(),
                     currentPlaceObject.getPlaceName(),
-                    currentPlaceObject.getPlaceSummary(),
                     currentPlaceObject.getPlaceImage1(),
                     currentPlaceObject.getPlaceImage2(),
                     currentPlaceObject.getPlaceImage3(),
@@ -85,12 +77,13 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
     public void onBindViewHolder(PlaceAdapter.ViewHolder viewHolder, int position) {
         Place currentPlace = places.get(position);
 
+        //populate the views inside cardviews
         viewHolder.mPlaceImage.setImageResource(currentPlace.getImageResourceId());
         viewHolder.mPlaceName.setText(currentPlace.getPlaceName());
         viewHolder.mPlaceSummary.setText(currentPlace.getPlaceSummary());
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    //Returns the total number of items in the data set held by the adapter.(invoked by the layout manager)
     @Override
     public int getItemCount() {
         return places.size();

@@ -36,7 +36,7 @@ public class TopSpotsFragment extends Fragment {
                 28.593573, 77.250727, (String) getText(R.string.Humayun_Tomb_address), (String) getText(R.string.Humayun_Tomb_no)));
 
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
+        PlaceAdapter adapter = new PlaceAdapter(places);
 
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

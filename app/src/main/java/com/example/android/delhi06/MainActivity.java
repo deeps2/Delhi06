@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //to exit the application when back button '<- ' is clicked on toolbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -29,23 +30,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);                          //will display the toolbar along with App's name i.e Delhi06
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//will display the back arrow '<-' button
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        final ViewPager viewPager = (ViewPager)findViewById(R.id.tab_viewpager);
-        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(this,getSupportFragmentManager());
+        //set adapter to viewpager
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.tab_viewpager);
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        //set viewpager with tablayout
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
+        //when a tab is clicked or selected via scrolling horizontally
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-
+                //adding animation to images corresponding to whatever category is selected
                 Animation mAnim = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.fade_in);
                 mAnim.setInterpolator(new DecelerateInterpolator());
                 mAnim.setDuration(1100);
@@ -67,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-            //do nothing
+                //do nothing
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-            //do nothing
+                //do nothing
             }
         });
     }
