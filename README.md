@@ -6,10 +6,13 @@ This is a simple tour app for exploring Delhi city,India. This app is a part of 
 Pic Courtesy: uplabs.com, GoogleImages, Wikipedia
 
 Libraries Used:
+-----------------
 https://github.com/Manabu-GT/ExpandableTextView
+
 https://github.com/daimajia/AndroidImageSlider
 
-how to use app:
+Video Demo of the app:
+----------------------
 https://www.youtube.com/watch?v=lHbmthUxH7c
 
 Hope you will like it :-)
