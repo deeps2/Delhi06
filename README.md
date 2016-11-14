@@ -1,8 +1,7 @@
 # Delhi06
 Tour App (A simple tour app to explore Delhi City,India)
 
-This is a simple tour app for exploring Delhi city,India. This app is a part of project under Udacity Android Basics Nanodegree.
-
+A simple tour app which will help you to explore famous places, restaurants, religious sites and shopping places in Delhi, India.
 Pic Courtesy: uplabs.com, GoogleImages, Wikipedia
 
 Libraries Used:
@@ -15,4 +14,6 @@ Video Demo of the app:
 ----------------------
 https://www.youtube.com/watch?v=lHbmthUxH7c
 
+
+This app is a part of project done by me under Udacity Android Basics Nanodegree.
 Hope you will like it :-)
