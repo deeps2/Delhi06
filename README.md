@@ -3,6 +3,8 @@ Tour App (A simple tour app to explore Delhi City,India)
 
 A simple tour app which will help you to explore famous places, restaurants, religious sites and shopping places in Delhi, India.
 
+Components Used: GoogleMaps Api, Two external Libraries(see below), Coordinator layout, AppBar layout, Toolbar, fragments, tablayout, recyclerview
+
 Pic Courtesy: uplabs.com, GoogleImages, Wikipedia
 
 Libraries Used:
