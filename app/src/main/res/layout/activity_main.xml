@@ -21,6 +21,11 @@
             app:layout_scrollFlags="scroll|snap">
 
             <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sample"/>
+
+            <ImageView
                 android:id="@+id/top_image"
                 android:layout_width="match_parent"
                 android:layout_height="96dp"

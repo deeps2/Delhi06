@@ -20,11 +20,11 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         if (position == 0)
             return new TopSpotsFragment();
         else if (position == 1)
-            return new RestaurantsFragment();
+            return new TopSpotsFragment();
         else if (position == 2)
-            return new ReligiousFragment();
+            return new TopSpotsFragment();
         else
-            return new ShoppingFragment();
+            return new TopSpotsFragment();
     }
 
     @Override

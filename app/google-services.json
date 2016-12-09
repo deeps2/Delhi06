@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "152322937304",
+    "firebase_url": "https://delhi06-31a81.firebaseio.com",
+    "project_id": "delhi06-31a81",
+    "storage_bucket": "delhi06-31a81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152322937304:android:bb6c6c8c867d8d32",
+        "android_client_info": {
+          "package_name": "com.example.android.delhi06"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152322937304-9t90ddg5it8c7h32cl06l8ks33u2s6e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{ "current_key": "" }],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
