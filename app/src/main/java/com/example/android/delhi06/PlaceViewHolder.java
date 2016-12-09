@@ -1,14 +1,9 @@
 package com.example.android.delhi06;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-
-import static com.example.android.delhi06.R.id.place;
 
 
 public class PlaceViewHolder extends RecyclerView.ViewHolder { //may have to implement onClickListener also so later add implements View.OnClickListener
@@ -31,7 +26,7 @@ public class PlaceViewHolder extends RecyclerView.ViewHolder { //may have to imp
         this.mPlaceName = (TextView) mView.findViewById(R.id.place_name);
         this.mPlaceSummary = (TextView) mView.findViewById(R.id.place_summary);
     }
-
+    /*
     public void setTopImage(String url) {
         //this.mPlaceImage = (ImageView) mView.findViewById(R.id.place_image);
 
@@ -51,7 +46,7 @@ public class PlaceViewHolder extends RecyclerView.ViewHolder { //may have to imp
     public void setPlaceSummary(String pSummary) {
         //this.mPlaceSummary = (TextView) mView.findViewById(R.id.place_summary);
         this.mPlaceSummary.setText(pSummary);
-    }
+    }*/
 
 }
 

@@ -64,18 +64,18 @@ public class TopSpotsFragment extends Fragment {
                 ){
                     @Override
                     protected void populateViewHolder(PlaceViewHolder viewHolder, PlaceInfo place, int position) {
-                        viewHolder.setTopImage(place.getTopimage());
+                        //viewHolder.setTopImage(place.getTopimage());
                        // ImageView i = (ImageView) viewHolder.mView.findViewById(R.id.place_image);
-                        //Log.v("PLACE_IMG",place.getTopimage());
-                      // Glide.with(getActivity()).load(place.getTopimage()).into(viewHolder.mPlaceImage);
+                        Log.v("PLACE_IMG",place.getTopimage());
+                        Glide.with(getActivity()).load(place.getTopimage()).into(viewHolder.mPlaceImage);
 
-                        //Log.v("PLACE_NAME",place.getName());
-                        viewHolder.setPlaceName(place.getName());
-                       // viewHolder.mPlaceName.setText(place.getName());
+                        Log.v("PLACE_NAME",place.getName());
+                        //viewHolder.setPlaceName(place.getName());
+                        viewHolder.mPlaceName.setText(place.getName());
 
-                        //Log.v("PLACE_SUMMARY",place.getSummary());
-                        viewHolder.setPlaceSummary(place.getSummary());
-                        //viewHolder.mPlaceSummary.setText(place.getSummary());
+                        Log.v("PLACE_SUMMARY",place.getSummary());
+                        //viewHolder.setPlaceSummary(place.getSummary());
+                        viewHolder.mPlaceSummary.setText(place.getSummary());
                     }
                 };
 
