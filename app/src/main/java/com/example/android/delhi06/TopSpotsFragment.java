@@ -10,12 +10,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
 public class TopSpotsFragment extends Fragment {
 
@@ -51,7 +57,7 @@ public class TopSpotsFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
 
 
-
+        final ProgressBar mProgressBar = (ProgressBar)rootView.findViewById(R.id.progressBar);
 
         final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("topspots");
 
@@ -63,7 +69,8 @@ public class TopSpotsFragment extends Fragment {
                         ref
                 ){
                     @Override
-                    protected void populateViewHolder(PlaceViewHolder viewHolder, PlaceInfo place, int position) {
+                    protected void populateViewHolder(PlaceViewHolder viewHolder, PlaceInfo place, final int position) {
+                        mProgressBar.setVisibility(ProgressBar.INVISIBLE);
                         //viewHolder.setTopImage(place.getTopimage());
                        // ImageView i = (ImageView) viewHolder.mView.findViewById(R.id.place_image);
                         Log.v("PLACE_IMG",place.getTopimage());
@@ -76,6 +83,47 @@ public class TopSpotsFragment extends Fragment {
                         Log.v("PLACE_SUMMARY",place.getSummary());
                         //viewHolder.setPlaceSummary(place.getSummary());
                         viewHolder.mPlaceSummary.setText(place.getSummary());
+
+
+                        viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                DatabaseReference ref = adapter.getRef(position);
+
+                                // Attach a listener to read the data at our posts reference
+                                ref.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        PlaceInfo post = dataSnapshot.getValue(PlaceInfo.class);
+                                        //do rest of the processing
+                                        //System.out.println(post);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+                                        System.out.println("The read failed: " + databaseError.getCode());
+                                    }
+                                });
+
+
+
+
+
+
+                            }
+                        });
+
+                        /*mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, mRecyclerView, new RecyclerClickListener() {
+                            @Override
+                            public void onClick(View view, int position) {
+                                String key = adapter.getRef(position).getKey();
+                            }
+
+                            @Override
+                            public void onLongClick(View view, int position) {
+
+                            }
+                        }));*/
                     }
                 };
 
