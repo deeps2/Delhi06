@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -24,23 +26,24 @@ import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 public class PlaceDescription extends AppCompatActivity implements OnMapReadyCallback {
 
-    IntentPlaceObject currentPlace;
+    PlaceInfo currentPlace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_description);
 
-        currentPlace = (IntentPlaceObject) getIntent().getSerializableExtra("CLICKED_PLACE");
+        currentPlace = (PlaceInfo) getIntent().getSerializableExtra("CLICKED_PLACE");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);                          //will display the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//will display the back arrow '<-' button
-        getSupportActionBar().setTitle(currentPlace.getPlaceName());
+        getSupportActionBar().setTitle(currentPlace.getName());
 
         //set the image under the CollapsingToolbarLayout
         ImageView i = (ImageView)findViewById(R.id.place);
-        i.setImageResource(currentPlace.getImageResourceId());
+        //i.setImageResource(currentPlace.getImageResourceId());
+        Glide.with(this).load(currentPlace.getTopimage()).into(i);
 
         //to make status bar transparent i.e. image will cover status bar too
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
@@ -61,7 +64,7 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         ExpandableTextView expTv1 = (ExpandableTextView) findViewById(R.id.expand_text_view);
 
         // IMPORTANT - call setText on the ExpandableTextView to set the text content to display
-        expTv1.setText(currentPlace.getPlaceDescription());
+        expTv1.setText(currentPlace.getDescription());
 
         //to show the google map in lite mode
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -104,8 +107,8 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         //set the phone number
         LinearLayout call_layer = (LinearLayout) findViewById (R.id.call_layout);
         TextView phNo = (TextView)findViewById(R.id.phone_No);
-        if(!currentPlace.getPhoneNo().equals("0"))
-            phNo.setText(currentPlace.getPhoneNo());
+        if(!currentPlace.getPhoneno().equals("0"))
+            phNo.setText(currentPlace.getPhoneno());
         else
             call_layer.setVisibility(View.GONE); //phone no will not be visible for places under shopping category
 
@@ -113,7 +116,7 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         call_layer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" +  currentPlace.getPhoneNo()));
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" +  currentPlace.getPhoneno()));
                 startActivity(intent);
             }
         });
@@ -121,7 +124,7 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        String name = currentPlace.getPlaceName();
+        String name = currentPlace.getName();
 
         // Add a marker at location and move the camera.
         LatLng coordinates = new LatLng(currentPlace.getLattitude(), currentPlace.getLongitude());

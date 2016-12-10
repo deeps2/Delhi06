@@ -1,6 +1,8 @@
 package com.example.android.delhi06;
 
-public class PlaceInfo {
+import java.io.Serializable;
+
+public class PlaceInfo implements Serializable {
 
     String address;
     String description;
@@ -120,6 +122,23 @@ public class PlaceInfo {
 
     public String getTopimage() {
         return topimage;
+    }
+
+    @Override
+    public String toString() {
+        return "PlaceInfo{" +
+                "address='" + address + '\'' +
+                ", description='" + description + '\'' +
+                ", fourthimage='" + fourthimage + '\'' +
+                ", lattitude=" + lattitude +
+                ", longitude=" + longitude +
+                ", name='" + name + '\'' +
+                ", phoneno='" + phoneno + '\'' +
+                ", secondimage='" + secondimage + '\'' +
+                ", summary='" + summary + '\'' +
+                ", thirdimage='" + thirdimage + '\'' +
+                ", topimage='" + topimage + '\'' +
+                '}';
     }
 }
 
