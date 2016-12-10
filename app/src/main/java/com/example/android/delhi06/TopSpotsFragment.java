@@ -5,18 +5,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class TopSpotsFragment extends Fragment {
 
@@ -48,11 +44,7 @@ public class TopSpotsFragment extends Fragment {
         */
 
         final RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.list);
-        //PlaceAdapter adapter = new PlaceAdapter(places);
-
-        //mRecyclerView.setAdapter(adapter); //this line will go down
         mRecyclerView.setHasFixedSize(true);
-
 
         final ProgressBar mProgressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
 
@@ -67,73 +59,31 @@ public class TopSpotsFragment extends Fragment {
             @Override
             protected void populateViewHolder(PlaceViewHolder viewHolder, PlaceInfo place, final int position) {
                 mProgressBar.setVisibility(ProgressBar.INVISIBLE);
-                //viewHolder.setTopImage(place.getTopimage());
-                // ImageView i = (ImageView) viewHolder.mView.findViewById(R.id.place_image);
-                Log.v("PLACE_IMG", place.getTopimage());
+
                 Glide.with(getActivity()).load(place.getTopimage()).into(viewHolder.mPlaceImage);
-
-                Log.v("PLACE_NAME", place.getName());
-                //viewHolder.setPlaceName(place.getName());
                 viewHolder.mPlaceName.setText(place.getName());
-
-                Log.v("PLACE_SUMMARY", place.getSummary());
-                //viewHolder.setPlaceSummary(place.getSummary());
                 viewHolder.mPlaceSummary.setText(place.getSummary());
-
 
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                         DatabaseReference ref = adapter.getRef(position); //get a DB reference to a particular PlaceInfo Object
-                                                                          //If you remove this line the DB reference Object which you get is for the whole ArrayList under topspots category
-                                                                         //So, inside onDataChange(), u can't do dataSnapshot.getValue(PlaceInfo.class) because the dataSnaphot contains ArrayList
-
                         PlaceInfo item = adapter.getItem(position);
                         Intent mainIntent = new Intent(getActivity(), PlaceDescription.class);
                         mainIntent.putExtra("CLICKED_PLACE", item);
                         getActivity().startActivity(mainIntent);
-
-
-                      /* // Attach a listener to read the data at our posts reference
-                        ref.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                PlaceInfo item = dataSnapshot.getValue(PlaceInfo.class);
-
-                                //do rest of the processing
-                                Intent mainIntent = new Intent(getActivity(), PlaceDescription.class);
-                                mainIntent.putExtra("CLICKED_PLACE", item);
-                                getActivity().startActivity(mainIntent);
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-                                System.out.println("The read failed: " + databaseError.getCode());
-                            }
-                        }); */
                     }
                 });
-
-                        /*mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, mRecyclerView, new RecyclerClickListener() {
-                            @Override
-                            public void onClick(View view, int position) {
-                                String key = adapter.getRef(position).getKey();
-                            }
-
-                            @Override
-                            public void onLongClick(View view, int position) {
-
-                            }
-                        }));*/
             }
         };
 
         final LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(getActivity());
 
-        adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() { //what should be position of this???
+        adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
             public void onItemRangeInserted(int positionStart, int itemCount) {
                 super.onItemRangeInserted(positionStart, itemCount);
+                mRecyclerView.scrollToPosition(0);
+                /*
                 int friendlyMessageCount = adapter.getItemCount();
                 int lastVisiblePosition = mLinearLayoutManager.findLastCompletelyVisibleItemPosition();
                 // If the recycler view is initially being loaded or the
@@ -143,7 +93,7 @@ public class TopSpotsFragment extends Fragment {
                         (positionStart >= (friendlyMessageCount - 1) &&
                                 lastVisiblePosition == (positionStart - 1))) {
                     mRecyclerView.scrollToPosition(positionStart);
-                }
+                }*/
             }
         });
 

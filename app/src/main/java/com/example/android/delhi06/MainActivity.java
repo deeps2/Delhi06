@@ -10,16 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 public class MainActivity extends AppCompatActivity {
-
-    ImageView mSample;
-   // Firebase mRef;
-    FirebaseStorage storage = FirebaseStorage.getInstance();
 
     //to exit the application when back button '<- ' is clicked on toolbar
     @Override
@@ -36,36 +28,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        //Firebase.setAndroidContext(this);
-        mSample = (ImageView) findViewById(R.id.sample);
-        //mRef = new Firebase("https://delhi06-31a81.firebaseio.com/Name");
-
-        StorageReference gsReference = storage.getReferenceFromUrl("gs://delhi06-31a81.appspot.com/red_fort_1.jpg");
-        Glide.with(this /* context */)
-                .using(new FirebaseImageLoader())
-                .load(gsReference)
-                .into(mSample);
-
-
-
-        //this was for the sample text view
-        /*mRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                String value = dataSnapshot.getValue(String.class);
-                mSample.setText(value);
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });*/
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);                          //will display the toolbar along with App's name i.e Delhi06
@@ -108,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTabUnselected(TabLayout.Tab tab) {
                 //do nothing
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 //do nothing

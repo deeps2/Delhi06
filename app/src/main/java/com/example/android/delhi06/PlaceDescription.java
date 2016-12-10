@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
@@ -73,11 +72,6 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         //to display the images in custom slider view
         SliderLayout sliderShow = (SliderLayout) findViewById(R.id.slider);
         sliderShow.setCustomIndicator((PagerIndicator) findViewById(R.id.custom_indicator));
-
-        //int image1 = currentPlace.getPlaceImage1();
-        //int image2 = currentPlace.getPlaceImage2();
-        //int image3 = currentPlace.getPlaceImage3();
-        //int image4 = currentPlace.getImageResourceId();
 
         //add images to slides one by one and set time duration for each slide
         DefaultSliderView textSliderView = new DefaultSliderView(this);
