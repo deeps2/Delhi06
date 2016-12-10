@@ -74,29 +74,29 @@ public class PlaceDescription extends AppCompatActivity implements OnMapReadyCal
         SliderLayout sliderShow = (SliderLayout) findViewById(R.id.slider);
         sliderShow.setCustomIndicator((PagerIndicator) findViewById(R.id.custom_indicator));
 
-        int image1 = currentPlace.getPlaceImage1();
-        int image2 = currentPlace.getPlaceImage2();
-        int image3 = currentPlace.getPlaceImage3();
-        int image4 = currentPlace.getImageResourceId();
+        //int image1 = currentPlace.getPlaceImage1();
+        //int image2 = currentPlace.getPlaceImage2();
+        //int image3 = currentPlace.getPlaceImage3();
+        //int image4 = currentPlace.getImageResourceId();
 
         //add images to slides one by one and set time duration for each slide
         DefaultSliderView textSliderView = new DefaultSliderView(this);
-        textSliderView.image(image1).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
+        textSliderView.image(currentPlace.getTopimage()).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
         sliderShow.addSlider(textSliderView);
         sliderShow.setDuration(1500);
 
         DefaultSliderView textSliderView2 = new DefaultSliderView(this);
-        textSliderView2.image(image2).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
+        textSliderView2.image(currentPlace.getSecondimage()).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
         sliderShow.addSlider(textSliderView2);
         sliderShow.setDuration(1500);
 
         DefaultSliderView textSliderView3 = new DefaultSliderView(this);
-        textSliderView3.image(image3).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
+        textSliderView3.image(currentPlace.getThirdimage()).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
         sliderShow.addSlider(textSliderView3);
         sliderShow.setDuration(1500);
 
         DefaultSliderView textSliderView4 = new DefaultSliderView(this);
-        textSliderView4.image(image4).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
+        textSliderView4.image(currentPlace.getFourthimage()).setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
         sliderShow.addSlider(textSliderView4);
         sliderShow.setDuration(1500);
 

@@ -88,7 +88,13 @@ public class TopSpotsFragment extends Fragment {
                                                                           //If you remove this line the DB reference Object which you get is for the whole ArrayList under topspots category
                                                                          //So, inside onDataChange(), u can't do dataSnapshot.getValue(PlaceInfo.class) because the dataSnaphot contains ArrayList
 
-                       // Attach a listener to read the data at our posts reference
+                        PlaceInfo item = adapter.getItem(position);
+                        Intent mainIntent = new Intent(getActivity(), PlaceDescription.class);
+                        mainIntent.putExtra("CLICKED_PLACE", item);
+                        getActivity().startActivity(mainIntent);
+
+
+                      /* // Attach a listener to read the data at our posts reference
                         ref.addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -104,7 +110,7 @@ public class TopSpotsFragment extends Fragment {
                             public void onCancelled(DatabaseError databaseError) {
                                 System.out.println("The read failed: " + databaseError.getCode());
                             }
-                        });
+                        }); */
                     }
                 });
 
