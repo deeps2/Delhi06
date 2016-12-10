@@ -1,5 +1,9 @@
 # Delhi06
 
+<b>NOTE: There are two branches for this project. master branch is the offline one. Second branch is firebase branch which reads contents from Firebase DB in real time via internet connection.</b>
+
+<b> This is for master branch </b>
+
 A simple tour app which will help you to explore famous places, restaurants, religious sites and shopping places in Delhi, India.
 
 When you click on the CardView, a new activity will open which has detail description about the corresponding place. You can read the place description (in the Expandable TextView). Below that you can see a small Map with a marker at the place location. You can start navigation by clicking on the arrow in the Map. Contact Number is also provided and clicking on it will open the call-dialer screen. At the Bottom, there is an Image Slider showing different pictures of the place.
