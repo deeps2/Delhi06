@@ -64,7 +64,7 @@ public class ShoppingFragment extends Fragment {
             }
         });
 
-        final LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         mRecyclerView.setAdapter(adapter);
 

@@ -56,8 +56,6 @@ public class RestaurantsFragment extends Fragment {
             }
         };
 
-        final LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(getActivity());
-
         adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
             public void onItemRangeInserted(int positionStart, int itemCount) {
@@ -66,6 +64,7 @@ public class RestaurantsFragment extends Fragment {
             }
         });
 
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         mRecyclerView.setAdapter(adapter);
 
