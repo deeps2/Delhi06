@@ -40,6 +40,6 @@ https://www.youtube.com/watch?v=lHbmthUxH7c
 
 PlayStore:
 ----------
-< />
+https://play.google.com/store/apps/details?id=com.shikhardeep.android.delhi06
 
 Hope you will like it :-)
