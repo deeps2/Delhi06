@@ -28,6 +28,10 @@ Video Demo
 -----------
 https://www.youtube.com/watch?v=lHbmthUxH7c
 
+PlayStore (firebase version of app)
+--------------------------------------------
+https://play.google.com/store/apps/details?id=com.shikhardeep.android.delhi06
+
 
 This app is a project work done by me under Udacity Android Basics Nanodegree.
 Hope you will like it :-)
