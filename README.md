@@ -1,4 +1,5 @@
-# Delhi06 <img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+# Delhi06 <img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png"/> 
+<b>Google PlayStore:</b> https://play.google.com/store/apps/details?id=com.shikhardeep.android.delhi06
 
 <b>NOTE: There are two branches for this project. master branch is the offline one. Second branch is firebase branch which reads contents from Firebase DB in real time via internet connection.</b>
 
