@@ -1,4 +1,4 @@
-# Delhi06
+# Delhi06 <img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
 
 <b>NOTE: There are two branches for this project. master branch is the offline one. Second branch is firebase branch which reads contents from Firebase DB in real time via internet connection.</b>
 
