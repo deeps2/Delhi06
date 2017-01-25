@@ -2,7 +2,7 @@
 
 <b>NOTE: There are two branches for this project. master branch is the offline one. Second branch is firebase branch which reads contents from Firebase DB in real time via internet connection.</b>
 
-<b>This is for firebase branch</b>
+<b>This readme is for firebase branch</b>
 
 What's different in firebase branch
 ------------------------------------------
@@ -18,11 +18,19 @@ A simple tour app which will help you to explore famous places, restaurants, rel
 
 When you click on the CardView, a new activity will open which has detail description about the corresponding place. You can read the place description (in the Expandable TextView). Below that you can see a small Map with a marker at the place location. You can start navigation by clicking on the arrow in the Map. Contact Number is also provided and clicking on it will open the call-dialer screen. At the Bottom, there is an Image Slider showing different pictures of the place.
 
-<b>Components Used</b>: Firebase DB & Storage services, GoogleMaps Api, Two external Libraries(see below), CoordinatorLayout, AppBarLayout, Toolbar, Fragments, ViewPager, TabLayout, RecyclerView, FirebaseRecyclerAdapter
+Components Used
+-------------------
+Firebase DB & Firebase Storage</br>
+FirebaseRecyclerAdapter</br>
+FirbaseUI</br>
+GoogleMaps API</br>
+Two External Libraries(see below)</br>
+CoordinatorLayout, AppBarLayout, Toolbar</br>
+Fragments, ViewPager, TabLayout, RecyclerView</br> 
 
 <b>Pic Courtesy</b>: www.uplabs.com, GoogleImages, Wikipedia
 
-Screenshots
+ScreenShots
 ------------
 <img src="/screenshots/1.jpg" width=300/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="/screenshots/2.jpg" width=300/>
 <br/><br/><br/>
