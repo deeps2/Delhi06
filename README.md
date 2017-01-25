@@ -2,7 +2,7 @@
 
 <b>NOTE: There are two branches for this project. master branch is the offline one. Second branch is firebase branch which reads contents from Firebase DB in real time via internet connection.</b>
 
-<b> This readme is for master branch </b>
+<b>This readme is for master branch </b>
 
 A simple tour app which will help you to explore famous places, restaurants, religious sites and shopping places in Delhi, India.
 
@@ -12,7 +12,7 @@ When you click on the CardView, a new activity will open which has detail descri
 
 <b>Pic Courtesy</b>: www.uplabs.com, GoogleImages, Wikipedia
 
-Screenshots
+ScreenShots
 ------------
 <img src="/screenshots/1.jpg" width=300/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="/screenshots/2.jpg" width=300/>
 <br/><br/><br/>
