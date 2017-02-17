@@ -1,5 +1,12 @@
 # Delhi06 <img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png"/> 
-<b>Google PlayStore:</b> https://play.google.com/store/apps/details?id=com.shikhardeep.android.delhi06
+<b>Google PlayStore:</b> https://play.google.com/store/apps/details?id=com.shikhardeep.android.delhi06 </br>
+<b>Video Demo:</b> https://www.youtube.com/watch?v=lHbmthUxH7c
+
+ScreenShots
+------------
+<img src="/screenshots/1.jpg" width=300/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="/screenshots/2.jpg" width=300/>
+<br/><br/><br/>
+<img src="/screenshots/3.jpg" width=300/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="/screenshots/4.jpg" width=300/>
 
 <b>NOTE: There are two branches for this project. master branch is the offline one. Second branch is firebase branch which reads contents from Firebase DB in real time via internet connection.</b>
 
@@ -31,21 +38,11 @@ Fragments, ViewPager, TabLayout, RecyclerView</br>
 
 <b>Pic Courtesy</b>: www.uplabs.com, GoogleImages, Wikipedia
 
-ScreenShots
-------------
-<img src="/screenshots/1.jpg" width=300/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="/screenshots/2.jpg" width=300/>
-<br/><br/><br/>
-<img src="/screenshots/3.jpg" width=300/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="/screenshots/4.jpg" width=300/>
-
 Libraries Used
 ---------------
 https://github.com/Manabu-GT/ExpandableTextView
 
 https://github.com/daimajia/AndroidImageSlider
-
-Video Demo 
------------
-https://www.youtube.com/watch?v=lHbmthUxH7c
 
 PlayStore:
 ----------
